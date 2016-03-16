@@ -44,7 +44,7 @@ func GetSubReddit(subReddit string) (*RedditResponse, error) {
 func PrintSubReddit(subReddit *RedditResponse) {
 	for _, child := range subReddit.Data.Children {
 		fmt.Printf("%s (%d)\n", child.Data.Title, child.Data.CommentCount)
-		fmt.Println(child.Data.URL)
+		fmt.Println("\x1b[34;1m" + child.Data.URL + "\x1b[0m")
 		fmt.Println("")
 	}
 }
