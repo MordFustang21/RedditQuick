@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	//TODO: Switch to flags
 	var subReddit string
 	if len(os.Args) < 2 {
 		println("No subreddit specified defaulting to Golang")
